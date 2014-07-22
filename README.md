@@ -19,6 +19,8 @@ public function login ( $db, $user, $pass ) }
   
   ...
   
+  $console->log( $user, $pass );
+  
 }
 ```
 
