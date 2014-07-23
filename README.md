@@ -53,6 +53,8 @@ in your html document. This will inject the javascript to include the php log re
 Examples
 --------
 
+### Logging Numbers
+
 ```php
 <?php
 
@@ -109,3 +111,58 @@ $console->log( fibonacci( 4 ) );	// Log the 4th number in the fibonacci sequence
 This would give the following output in the browser's console
 
 ![Console Output](https://raw.githubusercontent.com/zephenryus/zephenryus.github.io/master/images/console-1.png "Console Output")
+
+### Logging Objects
+
+When parsed into javascript PHP objects are turned into associative arrays and sent to the console.
+
+```php
+<?php
+
+require_once "Console.php";
+
+$console = new Console();
+
+class foo {
+
+	public $a, $b, $c, $d, $e, $f, $g;
+	private $h, $i, $j, $k, $l, $m;
+
+	function __construct( $var ) {
+		$this->a = $var;
+		$this->b = true;
+		$this->c = 42;
+		$this->d = 3.14;
+		$this->e = "Hello";
+		$this->f = array( 1, 2, 3, 4 );
+		$this->g = NULL;
+		$this->h = true;
+		$this->i = 42;
+		$this->j = 3.14;
+		$this->k = "Hello";
+		$this->l = array( 1, 2, 3, 4 );
+		$this->m = NULL;
+	}
+}
+
+$console->log( new foo( "bar" ) );
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>untitled</title>
+</head>
+<body>
+	
+</body>
+<?php
+	$console->export();
+?>
+</html>
+```
+
+This would give the following output in the browser's console
+
+![Console Output](https://raw.githubusercontent.com/zephenryus/zephenryus.github.io/master/images/console-2.png "Console Output")
