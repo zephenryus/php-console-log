@@ -1,4 +1,8 @@
-It's console.log() for PHP! PHP Console is a class that is modeled after Chrome's console API. It allows console logging from PHP via Javascript.
+It's console.log() for PHP!
+
+PHP Console is a class that is modeled after Chrome's console API. It allows console logging from PHP via Javascript.
+
+![Demo Output](https://raw.githubusercontent.com/zephenryus/zephenryus.github.io/master/images/console-demo-image.png "Demo Output")
 
 Usage
 =====
@@ -114,7 +118,7 @@ This would give the following output in the browser's console
 
 ### Logging Objects
 
-When parsed into javascript PHP objects are turned into associative arrays and sent to the console.
+When parsed into javascript PHP objects are turned into javascript objects and sent to the console. This makes it so you can drill down into object properties as you would with a regular javascript object.
 
 ```php
 <?php
