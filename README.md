@@ -1,3 +1,5 @@
+![PHP Console Log Logo](https://raw.githubusercontent.com/zephenryus/zephenryus.github.io/master/images/php-console-log-logo.png "PHP Console Log Logo")
+
 It's console.log() for PHP!
 
 PHP Console is a class that is modeled after Chrome's console API. It allows console logging from PHP via Javascript.
