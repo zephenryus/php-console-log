@@ -20,3 +20,5 @@ Variables, objects and arrays can then be passed to the console. The logs are au
 ```php
 console::log( "hello world!" );
 ```
+
+For more information check out the [wiki](https://github.com/zephenryus/php-console-log/wiki)
